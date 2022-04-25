@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html {
+    background-color:#0A192F;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1600px;
+    min-height: auto;
+    padding: 200px 150px 0px 150px;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+    padding: 0px 50px;
+    width: 100%;
+    height: 100px;
+    background-color: #0A192F;
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: #ccd6f6; 
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    counter-reset: item 0;
+    z-index: 12;
+}
+
+nav ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    counter-reset: item 0;
+    list-style: none;
+}
+
+nav ol li {
+    margin: 0px 5px;
+    position: relative;
+    counter-increment: item 1; 
+    font-size: 16px;   
+}
+
+nav a::before {
+    content: "0" counter(item) "."; 
+    margin-right: 5px;
+    color: #B026FF;
+    font-size: 16px;
+    text-align: right;
+}
+
+nav li:hover {
+    color:#B026FF;
+    text-decoration: underline;
+}
+
+#resume-button {
+    color: #B026FF;
+    background-color: transparent;
+    border: 1px solid #B026FF;
+    border-radius: 4px;
+    padding: 20px 28px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+#resume-button:hover, .button:hover, .project-button:hover{
+    background-color: #af26ff41;
+    transition-delay:300ms;
+}
+
+/* Section 1 - Intro */
+#header-intro {
+    margin: 0px auto;
+    padding: 100px 0px;
+    max-width: 1000px;
+}
+
+.highlight-text {
+    margin: 0px 0px 30px 4px;
+    color: #B026FF;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 16px;
+}
+
+h1 {
+    color:#ccd6f6;
+    line-height: 1.1;
+    font-size: 80px;
+    font-family: "Poppins";
+    font-weight: 600px;
+    /* font-family: "Calibre","Inter","San Francisco","SF Pro Text",sans-serif; */
+    margin: 0px;
+}
+
+h2 {
+    margin-top:10px;
+    color:#8892b0;
+    line-height: 0.9;
+    font-size: 80px;
+    font-family: "Poppins";
+    font-weight: 600px;
+}
+
+h3{
+    margin-top:10px;
+    color:#8892b0;
+    line-height: 0.7;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 600px;
+}
+
+h4 {
+    /* margin-top:10px; */
+    color:#8892b0;
+    line-height: 0.5;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 500px;  
+}
+
+p {
+    margin: 20px 0px 0px;
+    max-width: 540px;
+    color: #8892B0;
+    font-size: 16px;
+    font-family: "poppins";
+
+}
+
+.button {
+    color: #B026FF;
+    background-color: transparent;
+    border: 1px solid #B026FF;
+    border-radius: 4px;
+    padding: 20px 28px;
+    font-size: 14px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+a { 
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+}
+
+a:hover
+
+/* Section 2 - About Me section */
+
+#about { 
+    visibility: visible;
+    opacity: 1;
+    /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); */
+    /* transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s; */
+    max-width: 1000px;
+    margin: 0px auto; 
+    padding-bottom: 200px;
+}
+
+.section-layout {
+    display: inline-flex;
+    width:100%;
+    padding-bottom: 50px;
+}
+
+/* Heading styles for each section */
+
+.heading-numbers{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font: "Poppins";
+    font-size: 32px;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #ccd6f6;
+    line-height: 1.1;
+}
+
+.heading-numbers::before {
+    position: relative;
+    counter-increment: section 1;
+    content: "0" counter(section) ".";
+    margin-right: 10px;
+    color: #B026FF;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.heading-numbers::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #233554;
+}
+
+.right-skills-bar {
+    width: 40%;
+}
+.left-writing {
+    width: 60%;
+}
+
+i {
+    color: #B026FF;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.test {
+    display: inline-block; 
+}
+
+img {
+   width: 100%;
+   margin-top:20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 70px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Skills bar test */
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #B026FF;
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 5px; /* Add top padding */
+  padding-bottom: 5px; /* Add bottom padding */
+  padding-right: 5px;
+  height: 25px;
+  color: white;
+  font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  
+}
+
+.html {width: 75%; background-color: #B026FF;} 
+.css {width: 70%; background-color: #B026FF;} 
+.js {width: 10%; background-color: #B026FF;} 
+.php {
+    width: 100%; 
+    background-color: #B026FF;
+    text-align: center;
+}
+
+
+/* Project section - Cards */
+
+.card-deck{
+    /* margin: auto; */
+    width: 100%;
+    
+}
+
+.card {
+    width: 90%;
+    padding: 10px;
+    /* display: inline-block; */
+    margin: 0 5px 20px;
+    height: 370px;
+    text-align: left;
+    box-shadow: 0px 0px 10px #B026FF;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.card h4 {
+    font-size: 20px;
+}
+
+a:hover {
+color:#B026FF; 
+}
+
+.card h4, p {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.project-button {
+    color: #B026FF;
+    background-color: transparent;
+    border: 1px solid #B026FF;
+    border-radius: 4px;
+    padding: 20px 20px;
+    font-size: 14px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    text-decoration: none;
+    margin: auto;
+
+}
