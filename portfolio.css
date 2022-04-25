@@ -168,14 +168,14 @@ a:hover
 
 /* Section 2 - About Me section */
 
-#about { 
+.section { 
     visibility: visible;
     opacity: 1;
-    /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); */
-    /* transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s; */
-    max-width: 1000px;
-    margin: 0px auto; 
-    padding-bottom: 200px;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+    margin: 0px auto;
+    padding: 100px 0px;
+    max-width: 900px;
 }
 
 .section-layout {
@@ -184,9 +184,20 @@ a:hover
     padding-bottom: 50px;
 }
 
-/* Heading styles for each section */
+.section p {
+    margin: 20px 0px 0px;
+    max-width: 100%;
+    color: #8892B0;
+    font-size: 16px;
+    font-family: "poppins";
+}
 
-.heading-numbers{
+/* Heading styles for home page */
+
+.heading-numbers, 
+.heading-project-numbers, 
+.heading-skills-numbers,
+.heading-contact-numbers{
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -203,7 +214,7 @@ a:hover
 
 .heading-numbers::before {
     position: relative;
-    counter-increment: section 1;
+    counter-increment: section 2;
     content: "0" counter(section) ".";
     margin-right: 10px;
     color: #B026FF;
@@ -212,7 +223,11 @@ a:hover
     font-weight: 400;
 }
 
-.heading-numbers::after {
+
+.heading-numbers::after, 
+.heading-project-numbers::after,
+.heading-skills-numbers::after, 
+.heading-contact-numbers::after {
     content: "";
     display: block;
     position: relative;
@@ -221,6 +236,52 @@ a:hover
     margin-left: 20px;
     background-color: #233554;
 }
+
+
+.heading-skills-numbers::before {
+    position: relative;
+    counter-increment: section 3;
+    content: "0" counter(section) ".";
+    margin-right: 10px;
+    color: #B026FF;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.heading-project-numbers::before {
+    position: relative;
+    counter-increment: section 4;
+    content: "0" counter(section) ".";
+    margin-right: 10px;
+    color: #B026FF;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.heading-contact-numbers::before
+{
+    position: relative;
+    counter-increment: section 5;
+    content: "0" counter(section) ".";
+    margin-right: 10px;
+    color: #B026FF;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+/* .heading-project-numbers::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #233554;
+}*/
 
 .right-skills-bar {
     width: 40%;
@@ -232,15 +293,26 @@ a:hover
 i {
     color: #B026FF;
     font-size: 50px;
-    padding: 20px;
+    padding-right: 20px;
 }
 
-.test {
+.skill-subheading-section {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.skill-subheadings {
     display: inline-block; 
+    padding-bottom: 40px;
+}
+
+.skill-subheadings p {
+    max-width: 600px;
 }
 
 img {
-   width: 100%;
+   width: 80%;
    margin-top:20px;
 }
 
@@ -298,7 +370,7 @@ footer {
 
 .card {
     width: 90%;
-    padding: 10px;
+    padding: 30px;
     /* display: inline-block; */
     margin: 0 5px 20px;
     height: 370px;
@@ -316,7 +388,7 @@ a:hover {
 color:#B026FF; 
 }
 
-.card h4, p {
+.card h4 p {
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -333,4 +405,95 @@ color:#B026FF;
     text-decoration: none;
     margin: auto;
 
+}
+
+/* Contact us page styles */
+
+/* ///// inputs /////*/
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+    width: 650px;
+    max-width: 100%;
+    font-family: "poppins";
+    color:#8892b0;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+}
+
+.styled-input label {
+    color: #8892b0;
+    font-family: "Poppins";
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+/*.styled-input.wide { 
+    width: 650px;
+    max-width: 100%;
+    
+}*/
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: #8892b0;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid #B026FF;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+} 
+
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
 }

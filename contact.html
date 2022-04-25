@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ricci Lee">
-    <meta name="description" content="This is my portfolio that showcases some of my recent and upcoming works.">
-    <title>Ricci's portfolio</title>
+    <meta name="description" content="Want to know more? Why not not contact me.">
+    <title>Ricci Lee</title>
     <link rel="stylesheet" href="portfolio.css"> 
 </head>
 <body>
@@ -14,15 +14,46 @@
         <nav>
             <ol>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="index.html">About</a></li>
                 <li><a href="projects.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a id="resume-button" href="#" target="_blank" rel="noreferre" style="transition-delay:400ms;">Resume</a></li>
+                <li><a id="resume-button" href="./Files/Ricci Lee Sample resume.pdf" target="_blank" rel="noreferre" >Resume</a></li>
             </ol>
         </nav>
     </header> 
+
+
     <body>
+        <div >
+            <h2 class="heading-contact-numbers">Contact me</h2>
+            <div>
+                <div style="margin-left:318px; margin-right:318px;">
+                    <p style="max-width:640px;">I'm always looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll get back to you!</p>
+                    <p>Do you have feedback for me? I'd love to hear that too.</p>
+                </div>
+                <form class="row input-container" action="https://formspree.io/f/mbjwpdle" method="POST">
+                    <div class="col-xs-12">
+                        <label class="styled-input wide">
+                            Name:
+                            <input type="text" name="name">
+                        </label>
+                    </div>
+                    <label class="styled-input wide">
+                        Email:
+                        <input type="email" name="email">
+                    </label>
+                    <label class="styled-input wide">
+                        Your message:
+                        <textarea name="message"></textarea>
+                    </label>
+                    <div><button class="button" type="submit">Send message!</button></div>
+                </form>    
+                    
+                
+            </div>
+        </div>
+        
     <footer>
         <p>Built by Ricci Lee </p>
     </footer>
