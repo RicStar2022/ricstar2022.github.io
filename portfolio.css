@@ -91,6 +91,10 @@ nav li:hover {
     max-width: 1000px;
 }
 
+#header-tag {
+    width: 50%;
+}
+
 .highlight-text {
     margin: 0px 0px 30px 4px;
     color: #B026FF;
@@ -163,11 +167,16 @@ a {
     text-decoration-skip-ink: auto;
     color: inherit;
     position: relative;
+    line-height: 1.5;
 }
 
 a:hover
 
 /* Section 2 - About Me section */
+
+#about-me {
+    max-width: 1000px;
+}
 
 .section { 
     visibility: visible;
@@ -176,15 +185,18 @@ a:hover
     transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
     margin: 0px auto;
     padding: 100px 0px;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
-.section-layout, .project-section-layout {
+.section-layout {
     display: inline-flex;
     width:100%;
     padding-bottom: 50px;
 }
 
+.project-section-layout{
+    display: inline-block;
+}
 
 
 .section p {
@@ -286,6 +298,21 @@ a:hover
     background-color: #233554;
 }*/
 
+#project-section {
+   display: flex;
+   flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+} 
+
+#skill-section {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .right-skills-bar {
     width: 40%;
 }
@@ -367,23 +394,23 @@ footer {
 .card-deck{
     /* margin: auto; */
     width: 100%;
-    display: flex;
-    align-content: stretch;
+    /* display: flex;
+    align-content: stretch; */
     
 }
 
 .card {
-    width: 90%;
+    width: 46%;
     padding: 30px;
-    /* display: inline-block; */
-    margin: 0 5px 20px;
+    display: inline-block;
+    margin: 0 17px 47px;
     height: 370px;
     text-align: left;
     box-shadow: 0px 0px 10px #B026FF;
     border-radius: 4px;
     background-color: transparent;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .card h4 {
@@ -460,6 +487,14 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     
 }*/
 
+#contact-container{
+    max-width: 1000px;
+    padding-top:50px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
 input,
 textarea {
     padding: 30px;
@@ -515,6 +550,8 @@ input[type=checkbox]:checked + label {
     max-width: 650px;
 }
 
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     html {
@@ -555,6 +592,10 @@ input[type=checkbox]:checked + label {
         width: 50%;
     } */
 
+    #skill-section {
+        max-width: 1000px;
+    }
+
     .left-writing, .right-skills-bar {
        width: 100%;
     }
@@ -563,10 +604,10 @@ input[type=checkbox]:checked + label {
         align-items: flex-start;
     }
 
-    .project-section-layout{
+    /* .project-section-layout{
         display: flex;
         flex-direction: column;
-    }
+    } */
 
     .card {
         height: auto;
@@ -585,7 +626,7 @@ input[type=checkbox]:checked + label {
     }
 
     .header-intro {
-        /* width: 100%!important; */
+        max-width: 1000px;
     }
 
     .about-section-layout{
