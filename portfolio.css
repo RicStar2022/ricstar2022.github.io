@@ -95,6 +95,7 @@ nav li:hover {
     width: 50%;
 }
 
+
 .highlight-text {
     margin: 0px 0px 30px 4px;
     color: #B026FF;
@@ -557,6 +558,7 @@ input[type=checkbox]:checked + label {
     html {
         padding:50px 30px 0px 30px;
     }
+    
 
     .section {
         width: 100%!important;
