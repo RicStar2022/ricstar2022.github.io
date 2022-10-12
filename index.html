@@ -6,20 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ricci Lee">
     <meta name="description" content="This is my portfolio that showcases some of my recent and upcoming works.">
-    <title>Ricci's portfolio</title>
+    <title>RL Portfolio</title>
+    <!-- displays the logo in the broswer tab -->
+    <link rel="icon" href="./Images/RL-logo.png">
     <link rel="stylesheet" href="portfolio.css"> 
+    <!-- displays hamburger meu (bars on small screens) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./index.html#about-me">About</a></li>
-                <li><a href="./projects.html">Skills</a></li>
-                <li><a href="./projects.html#project-section">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a id="resume-button" href="./Files/Ricci Lee Sample resume.pdf" target="_blank" rel="noreferre" >Resume</a></li>
-            </ol>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="hamburger-menu">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ol class="menu-items">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="./index.html#about-me">About</a></li>
+                  <li><a href="./projects.html">Skills</a></li>
+                  <li><a href="./projects.html#project-section">Projects</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a id="resume-button" href="./Files/Ricci Lee Sample resume.pdf" target="_blank" rel="noreferre" >Resume</a></li>
+                </ol>
+      
+            </div>
         </nav>
     </header> 
 
@@ -36,7 +49,7 @@
         <div class="about-section-layout">
             <div class="about-me-text" >
                 <p>Hi there! My name is Ricci (pause for effect) Lee and I enjoy creating things that live on the internet. My interest in web devleopment started back in 2016 purely by accident when I had to undergo a web devleopment unit for my marketing degree.</p>
-                <p>Fast-forward to today, and I've had the privilige of working at different ends of the spectrum—from the <a href="https://go-creative.com.au/websites/" style="color:#B026FF;">small business </a> to a <a href="https://www.tmr.qld.gov.au/" style="color:#B026FF";>multion million dollar orginisation.</a></p> 
+                <p>Fast-forward to today, and I've had the privilige of working at different ends of the spectrum—from the <a href="https://go-creative.com.au/websites/" style="color:#B026FF;">small business </a> to a <a href="https://www.tmr.qld.gov.au/" style="color:#B026FF";>multion million dollar organisation.</a></p> 
                 <p>My passion and chosen field of expertise is user experience. I want to understand and implement changes to make life easier for users, regardless of their ability, knowledge, and skillset. I firmly believe that everyone should have access to the information online and I am 100% dedicated to addressing the barriers and disadvantages for people because of a mismatch between design and the user. </p>
                 <p>Learn more about my <a href="projects.html/#skills" style="color:#B026FF;">skills</a> and the <a href="projects.html/#projects" style="color:#B026FF";>projects</a> that I have undertaken. </p>
             </div>
@@ -49,4 +62,5 @@
         <p>Built by Ricci Lee </p>
     </footer>
 </body>
+<script src="portfolio.js"></script>
 </html>
